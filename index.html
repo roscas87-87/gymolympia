@@ -1,799 +1,610 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Olympia Gym Armilla | Hierro, disciplina y familia</title>
-<meta name="description" content="Olympia Gym Armilla. Gimnasio clásico, fuerza, culturismo, musculación y ambiente real.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-:root{
-  --black:#050506;
-  --dark:#0b0b0e;
-  --dark2:#121216;
-  --white:#f8f8f8;
-  --muted:#b9b9c2;
-  --red:#ff3514;
-  --orange:#ff7a18;
-  --yellow:#ffd42f;
-  --yellow2:#ffe96a;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  background:var(--black);
-  color:var(--white);
-  font-family:'Barlow',system-ui,sans-serif;
-  overflow-x:hidden;
-}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olympia Gym Armilla | Hierro, disciplina y familia</title>
+  <meta name="description" content="Olympia Gym Armilla. Gimnasio clásico, musculación, fuerza, culturismo y ambiente real desde 1995." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --black:#050506;
+      --dark:#0b0b0e;
+      --dark2:#121216;
+      --white:#f8f8f8;
+      --muted:#b9b9c2;
+      --red:#ff3514;
+      --orange:#ff7a18;
+      --yellow:#ffd42f;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--white);font-family:'Barlow',system-ui,sans-serif;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
 
-/* HEADER EDITABLE */
-.nav{
-  position:fixed;
-  top:0;left:0;right:0;
-  z-index:1000;
-  height:76px;
-  background:rgba(5,5,6,.92);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-.nav-inner{
-  max-width:1280px;
-  height:100%;
-  margin:auto;
-  padding:0 22px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-.brand img{
-  width:50px;height:50px;
-  border-radius:50%;
-  object-fit:cover;
-  background:#fff;
-  box-shadow:0 0 0 2px rgba(255,255,255,.12),0 0 28px rgba(255,53,20,.55);
-}
-.brand-title{
-  font-family:'Bebas Neue';
-  font-size:33px;
-  letter-spacing:.08em;
-  line-height:.82;
-}
-.brand-sub{
-  color:var(--yellow);
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.28em;
-  margin-top:3px;
-}
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:34px;
-}
-.nav-links a{
-  font-size:13px;
-  font-weight:900;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  color:#e8e8e8;
-  transition:.2s;
-}
-.nav-links a:hover{color:var(--yellow)}
-.nav-cta{
-  background:var(--yellow);
-  color:#080808;
-  border-radius:999px;
-  padding:15px 30px;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  box-shadow:0 0 22px rgba(255,212,47,.36);
-  transition:.2s;
-}
-.nav-cta:hover{transform:translateY(-2px);box-shadow:0 0 32px rgba(255,212,47,.55)}
-.menu-btn{
-  display:none;
-  background:none;
-  border:1px solid rgba(255,255,255,.2);
-  color:#fff;
-  border-radius:12px;
-  padding:9px 12px;
-  font-size:22px;
-}
-.mobile-menu{display:none}
+    /* ═══════════════════════════════
+       NAV
+    ═══════════════════════════════ */
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:1000;
+      height:72px;
+      background:rgba(5,5,6,.94);
+      backdrop-filter:blur(20px);
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
+    .nav-inner{
+      max-width:1280px;height:100%;margin:auto;padding:0 24px;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-logo{
+      width:48px;height:48px;border-radius:50%;object-fit:cover;
+      box-shadow:0 0 0 2px rgba(255,255,255,.1),0 0 24px rgba(255,53,20,.5);
+    }
+    .brand-title{font-family:'Bebas Neue';font-size:30px;letter-spacing:.09em;line-height:.85;}
+    .brand-sub{color:var(--yellow);font-size:11px;font-weight:900;letter-spacing:.28em;margin-top:3px;}
 
-/* HERO EDITABLE */
-.hero{
-  position:relative;
-  min-height:100vh;
-  padding:116px 22px 0;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 72% 43%,rgba(255,53,20,.30),transparent 24rem),
-    radial-gradient(circle at 18% 79%,rgba(255,212,47,.14),transparent 28rem),
-    linear-gradient(180deg,#050506 0%,#0b0b0f 58%,#050506 100%);
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:76px 0 0;
-  background:url("img/brazos.png") center 12% / min(1620px,116vw) auto no-repeat;
-  opacity:.24;
-  filter:contrast(125%) brightness(112%) saturate(108%);
-  z-index:1;
-  pointer-events:none;
-}
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:url("img/scanlines.png") repeat;
-  opacity:.50;
-  z-index:2;
-  pointer-events:none;
-}
+    .nav-links{display:flex;align-items:center;gap:30px;}
+    .nav-links a{font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:#e0e0e0;transition:.2s;}
+    .nav-links a:hover{color:var(--yellow);}
 
-/* SOL AMARILLO ENTERO */
-.sun{
-  position:absolute;
-  z-index:1;
-  top:92px;
-  right:5.8vw;
-  width:270px;
-  height:270px;
-  border-radius:50%;
-  background:var(--yellow);
-  opacity:.72;
-  box-shadow:
-    0 0 55px rgba(255,212,47,.28),
-    inset 0 -32px 70px rgba(255,122,24,.20);
-}
+    .nav-cta{
+      background:var(--yellow);color:#080808;
+      border-radius:999px;padding:13px 28px;
+      font-weight:900;font-size:13px;letter-spacing:.08em;text-transform:uppercase;
+      box-shadow:0 0 22px rgba(255,212,47,.35);transition:.2s;
+      display:inline-flex;align-items:center;gap:7px;
+    }
+    .nav-cta:hover{transform:translateY(-2px);box-shadow:0 0 35px rgba(255,212,47,.55);}
 
-/* Letra OLYMPIA gigante */
-.olympia-outline{
-  position:absolute;
-  z-index:1;
-  left:6.5vw;
-  bottom:75px;
-  font-family:'Bebas Neue';
-  font-size:25vw;
-  line-height:.7;
-  color:transparent;
-  -webkit-text-stroke:1px rgba(255,53,20,.22);
-  opacity:.72;
-  pointer-events:none;
-}
+    .menu-btn{
+      display:none;background:none;border:1px solid rgba(255,255,255,.18);
+      color:#fff;border-radius:10px;padding:8px 12px;font-size:20px;cursor:pointer;
+    }
+    .mobile-menu{
+      display:none;position:absolute;top:72px;left:0;right:0;
+      background:#080808;border-bottom:1px solid rgba(255,255,255,.08);
+      padding:16px 24px;gap:10px;flex-direction:column;
+    }
+    .mobile-menu a{
+      padding:13px 16px;border-radius:14px;
+      background:rgba(255,255,255,.05);font-weight:900;
+      text-transform:uppercase;letter-spacing:.1em;font-size:14px;
+      transition:.2s;
+    }
+    .mobile-menu a:hover{background:rgba(255,212,47,.12);color:var(--yellow);}
+    .nav.open .mobile-menu{display:flex;}
 
-/* Contenido editable encima */
-.hero-inner{
-  position:relative;
-  z-index:4;
-  max-width:1280px;
-  margin:auto;
-  min-height:calc(100vh - 116px);
-  display:grid;
-  grid-template-columns:1.02fr .98fr;
-  gap:42px;
-  align-items:center;
-  padding-bottom:132px;
-}
-.badge{
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-  border:1px solid var(--red);
-  background:rgba(255,53,20,.10);
-  color:#ffe3a3;
-  border-radius:999px;
-  padding:10px 17px;
-  font-size:13px;
-  font-weight:900;
-  letter-spacing:.13em;
-  text-transform:uppercase;
-  margin-bottom:25px;
-}
-.badge::before{
-  content:"";
-  width:9px;height:9px;
-  border-radius:50%;
-  background:var(--yellow);
-  box-shadow:0 0 12px var(--yellow);
-}
-h1{
-  font-family:'Bebas Neue';
-  font-size:clamp(76px,8.6vw,142px);
-  line-height:.87;
-  letter-spacing:.025em;
-  text-shadow:0 4px 0 rgba(0,0,0,.35);
-}
-.grad{
-  background:linear-gradient(90deg,var(--red),var(--orange),var(--yellow));
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-.hero-copy{
-  max-width:575px;
-  margin:27px 0 31px;
-  color:#c8c8d0;
-  font-size:19px;
-  line-height:1.7;
-}
-.ctas{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-}
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-  border-radius:999px;
-  padding:17px 24px;
-  font-weight:900;
-  font-size:13px;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  white-space:nowrap;
-  transition:.2s;
-}
-.btn:hover{transform:translateY(-2px)}
-.btn-yellow{
-  background:var(--yellow);
-  color:#080808;
-  box-shadow:0 0 27px rgba(255,212,47,.32);
-}
-.btn-red{
-  background:var(--red);
-  color:#fff;
-  box-shadow:0 0 27px rgba(255,53,20,.34);
-}
-.btn-ghost{
-  border:1px solid rgba(255,255,255,.26);
-  color:#fff;
-  background:rgba(0,0,0,.18);
-}
-.logo-hero-wrap{
-  position:relative;
-  width:min(455px,78vw);
-  aspect-ratio:1;
-  margin:auto;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-}
-.logo-hero-wrap::before{
-  content:"";
-  position:absolute;
-  inset:-18px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(255,53,20,.82),rgba(255,212,47,.52) 39%,transparent 67%);
-  filter:blur(9px);
-  animation:pulse 3.4s ease-in-out infinite;
-}
-.logo-hero{
-  position:relative;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:50%;
-  background:#fff;
-  box-shadow:0 18px 70px rgba(0,0,0,.52);
-}
-@keyframes pulse{50%{opacity:.68;transform:scale(1.035)}}
+    /* ═══════════════════════════════
+       HERO
+    ═══════════════════════════════ */
+    .hero{
+      position:relative;
+      min-height:100vh;
+      padding-top:72px;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 68% 42%,rgba(255,80,20,.22),transparent 26rem),
+        radial-gradient(circle at 16% 78%,rgba(255,212,47,.10),transparent 28rem),
+        linear-gradient(180deg,#050506 0%,#0c0c10 55%,#050506 100%);
+    }
 
-/* Features inferiores */
-.hero-features{
-  position:absolute;
-  z-index:5;
-  left:50%;
-  bottom:38px;
-  transform:translateX(-50%);
-  width:min(100%,1280px);
-  padding:0 22px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:22px;
-}
-.hero-feature{
-  border-left:1px solid rgba(255,255,255,.12);
-  padding-left:24px;
-  display:grid;
-  grid-template-columns:auto 1fr;
-  gap:16px;
-  align-items:start;
-}
-.hero-feature .ico{
-  font-size:38px;
-  color:var(--red);
-  line-height:1;
-  filter:drop-shadow(0 0 10px rgba(255,53,20,.65));
-}
-.hero-feature h3{
-  font-size:17px;
-  font-weight:900;
-  letter-spacing:.07em;
-  text-transform:uppercase;
-  line-height:1.25;
-}
-.hero-feature p{
-  color:#c6c6cc;
-  margin-top:5px;
-  line-height:1.45;
-}
-.red-grunge{
-  position:absolute;
-  left:0;right:0;bottom:0;
-  height:52px;
-  z-index:6;
-  background:url("img/grunge-red.png") bottom center / cover no-repeat;
-}
+    /* Silueta brazos de fondo */
+    .hero-bg-img{
+      position:absolute;
+      inset:72px 0 0;
+      background:url("img/brazos_sun.png") center 36% / min(1500px,112vw) auto no-repeat;
+      opacity:.44;
+      filter:contrast(110%) brightness(95%);
+      z-index:1;
+      pointer-events:none;
+    }
 
-/* RESTO WEB */
-.ticker{
-  background:linear-gradient(90deg,var(--red),var(--orange),var(--yellow));
-  color:#111;
-  overflow:hidden;
-  position:relative;
-  z-index:10;
-}
-.ticker-track{
-  display:flex;
-  white-space:nowrap;
-  animation:scroll 25s linear infinite;
-}
-.ticker span{
-  font-family:'Bebas Neue';
-  font-size:32px;
-  letter-spacing:.08em;
-  padding:12px 28px;
-}
-@keyframes scroll{to{transform:translateX(-50%)}}
+    /* Líneas horizontales retro (derecha del hero) */
+    .hero-lines{
+      position:absolute;
+      right:0;top:0;bottom:0;
+      width:40%;
+      background:repeating-linear-gradient(
+        0deg,
+        rgba(255,140,0,.22) 0px,
+        rgba(255,140,0,.22) 2px,
+        transparent 2px,
+        transparent 12px
+      );
+      mask-image:linear-gradient(90deg, transparent 0%, rgba(0,0,0,.6) 30%, black 60%);
+      z-index:2;pointer-events:none;
+    }
 
-.section{
-  padding:92px 22px;
-  background:#0b0b0e;
-}
-.section.alt{background:#121216}
-.wrap{max-width:1280px;margin:auto}
-.label{
-  font-size:13px;
-  font-weight:900;
-  letter-spacing:.25em;
-  text-transform:uppercase;
-  color:var(--yellow);
-  margin-bottom:12px;
-}
-h2{
-  font-family:'Bebas Neue';
-  font-size:clamp(54px,6vw,90px);
-  line-height:.9;
-  letter-spacing:.03em;
-}
-.lead{
-  max-width:760px;
-  color:var(--muted);
-  font-size:18px;
-  line-height:1.75;
-  margin-top:17px;
-}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-  margin-top:42px;
-}
-.card{
-  position:relative;
-  overflow:hidden;
-  border-radius:28px;
-  border:1px solid rgba(255,255,255,.09);
-  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));
-  padding:30px;
-  transition:.22s;
-}
-.card:hover{transform:translateY(-5px);border-color:rgba(255,212,47,.36)}
-.card::before{
-  content:"";
-  position:absolute;
-  right:-45px;top:-45px;
-  width:130px;height:130px;
-  border-radius:50%;
-  background:rgba(255,53,20,.17);
-  filter:blur(22px);
-}
-.card .icon{font-size:36px;margin-bottom:18px}
-.card h3{
-  font-family:'Bebas Neue';
-  font-size:34px;
-  letter-spacing:.04em;
-  margin-bottom:9px;
-}
-.card p{color:var(--muted);line-height:1.65}
-.history-box{
-  margin-top:34px;
-  border-left:4px solid var(--red);
-  background:rgba(255,255,255,.045);
-  border-radius:0 24px 24px 0;
-  padding:30px;
-  color:#d7d7dd;
-  line-height:1.7;
-  font-size:18px;
-}
-.history-box strong{color:var(--yellow)}
-.plans{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-  margin-top:42px;
-}
-.plan{
-  border:1px solid rgba(255,255,255,.1);
-  background:#141418;
-  border-radius:30px;
-  padding:32px;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-}
-.plan.popular{
-  background:linear-gradient(145deg,var(--red),#a92309);
-  box-shadow:0 0 45px rgba(255,53,20,.28);
-}
-.plan h3{font-family:'Bebas Neue';font-size:44px}
-.price{
-  font-family:'Bebas Neue';
-  font-size:70px;
-  color:var(--yellow);
-  margin:10px 0;
-}
-.plan ul{
-  list-style:none;
-  display:grid;
-  gap:12px;
-  margin:22px 0;
-  color:#ddd;
-  line-height:1.4;
-}
-.plan li::before{
-  content:"✓";
-  color:var(--yellow);
-  font-weight:900;
-  margin-right:9px;
-}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
-  margin-top:42px;
-}
-.gallery-item{
-  min-height:230px;
-  border-radius:24px;
-  padding:22px;
-  display:flex;
-  align-items:end;
-  overflow:hidden;
-  font-family:'Bebas Neue';
-  font-size:34px;
-  letter-spacing:.03em;
-  border:1px solid rgba(255,255,255,.08);
-  background:
-    linear-gradient(135deg,rgba(255,53,20,.32),rgba(255,212,47,.12)),
-    #17171c;
-}
-.gallery-item:nth-child(2),.gallery-item:nth-child(5){min-height:300px}
-.contact{
-  background:linear-gradient(90deg,var(--red),var(--orange),var(--yellow));
-  color:#080808;
-}
-.contact .label,.contact h2{color:#080808}
-.contact .lead{color:rgba(0,0,0,.70)}
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:24px;
-  margin-top:38px;
-}
-.contact-card{
-  background:rgba(255,255,255,.72);
-  backdrop-filter:blur(10px);
-  border-radius:30px;
-  padding:30px;
-}
-.contact-card a,.contact-card p{
-  display:block;
-  font-size:18px;
-  font-weight:800;
-  color:#111;
-  margin:14px 0;
-}
-footer{
-  padding:40px 22px 92px;
-  background:#050506;
-  border-top:1px solid rgba(255,255,255,.1);
-}
-.footer-inner{
-  max-width:1280px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:25px;
-  color:#a8a8ae;
-}
-.social{display:flex;gap:18px;flex-wrap:wrap}
-.social a{color:var(--yellow);font-weight:900}
-.float-wa{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  z-index:2000;
-  background:#25D366;
-  color:#06130a;
-  padding:17px 22px;
-  border-radius:999px;
-  font-weight:900;
-  box-shadow:0 14px 34px rgba(0,0,0,.45);
-}
+    /* Scanlines overlay */
+    .hero-scanlines{
+      position:absolute;inset:0;
+      background:repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,.028) 0px,
+        rgba(255,255,255,.028) 1px,
+        transparent 1px,
+        transparent 5px
+      );
+      opacity:.6;z-index:3;pointer-events:none;
+    }
 
-/* RESPONSIVE */
-@media(max-width:980px){
-  .nav-links,.nav-cta{display:none}
-  .menu-btn{display:block}
-  .nav.open .mobile-menu{display:grid}
-  .mobile-menu{
-    position:absolute;
-    top:76px;
-    left:0;right:0;
-    background:#080808;
-    border-bottom:1px solid rgba(255,255,255,.1);
-    padding:18px 22px;
-    gap:12px;
-  }
-  .mobile-menu a{
-    padding:14px;
-    border-radius:16px;
-    background:rgba(255,255,255,.055);
-    font-weight:900;
-    text-transform:uppercase;
-  }
-  .hero{
-    padding-top:108px;
-    min-height:auto;
-  }
-  .hero::before{
-    background-size:156vw auto;
-    background-position:center 162px;
-    opacity:.17;
-  }
-  .sun{
-    width:180px;
-    height:180px;
-    right:-42px;
-    top:98px;
-    opacity:.72;
-  }
-  .olympia-outline{
-    font-size:39vw;
-    left:-6vw;
-    bottom:125px;
-  }
-  .hero-inner{
-    grid-template-columns:1fr;
-    text-align:center;
-    gap:20px;
-    min-height:auto;
-    padding-bottom:330px;
-  }
-  .hero-copy{
-    margin-left:auto;
-    margin-right:auto;
-    font-size:17px;
-  }
-  .ctas{justify-content:center}
-  .logo-hero-wrap{
-    order:-1;
-    width:min(305px,78vw);
-  }
-  .hero-features{
-    grid-template-columns:1fr 1fr;
-    bottom:52px;
-  }
-  .hero-feature{padding-left:16px}
-  .cards,.plans{grid-template-columns:1fr}
-  .gallery{grid-template-columns:1fr 1fr}
-  .contact-grid{grid-template-columns:1fr}
-  .footer-inner{flex-direction:column;text-align:center}
-}
-@media(max-width:560px){
-  .brand-title{font-size:27px}
-  .brand img{width:42px;height:42px}
-  .brand-sub{font-size:10px}
-  h1{font-size:72px}
-  .badge{font-size:11px}
-  .btn{width:100%}
-  .hero-inner{padding-bottom:560px}
-  .hero-features{grid-template-columns:1fr;gap:15px}
-  .gallery{grid-template-columns:1fr}
-  .ticker span{font-size:25px}
-  .float-wa{left:15px;right:15px;text-align:center}
-}
-</style>
+    /* OLYMPIA texto fantasma */
+    .olympia-ghost{
+      position:absolute;z-index:2;
+      left:4vw;bottom:80px;
+      font-family:'Bebas Neue';
+      font-size:24vw;line-height:.75;
+      color:transparent;
+      -webkit-text-stroke:1.5px rgba(255,53,20,.20);
+      pointer-events:none;user-select:none;
+    }
+
+    .hero-inner{
+      position:relative;z-index:5;
+      max-width:1280px;margin:auto;
+      min-height:calc(100vh - 72px);
+      display:grid;grid-template-columns:1.05fr .95fr;
+      gap:40px;align-items:center;
+      padding:40px 24px 140px;
+    }
+
+    /* Badge */
+    .badge{
+      display:inline-flex;align-items:center;gap:9px;
+      border:1.5px solid var(--red);background:rgba(255,53,20,.10);
+      color:#ffe3a3;border-radius:999px;
+      padding:9px 18px;font-size:12px;font-weight:900;
+      letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px;
+    }
+    .badge-dot{width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 10px var(--yellow);}
+
+    /* H1 */
+    h1{
+      font-family:'Bebas Neue';
+      font-size:clamp(72px,8.8vw,148px);
+      line-height:.88;letter-spacing:.025em;
+      text-shadow:0 4px 0 rgba(0,0,0,.4),0 0 60px rgba(0,0,0,.3);
+    }
+    .grad{
+      background:linear-gradient(90deg,var(--red) 0%,var(--orange) 50%,var(--yellow) 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      display:block;
+    }
+
+    .hero-copy{
+      max-width:580px;margin:24px 0 28px;
+      color:#d2d2da;font-size:18px;line-height:1.72;
+      text-shadow:0 2px 12px rgba(0,0,0,.7);
+    }
+
+    /* CTA buttons */
+    .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:4px;}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      border-radius:999px;padding:16px 24px;
+      font-weight:900;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+      white-space:nowrap;transition:.2s;cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-2px);}
+    .btn-yellow{background:var(--yellow);color:#080808;box-shadow:0 0 28px rgba(255,212,47,.35);}
+    .btn-yellow:hover{background:#ffe44f;box-shadow:0 0 40px rgba(255,212,47,.55);}
+    .btn-red{background:var(--red);color:#fff;box-shadow:0 0 28px rgba(255,53,20,.36);}
+    .btn-red:hover{background:#ff4d28;box-shadow:0 0 40px rgba(255,53,20,.55);}
+    .btn-ghost{border:1.5px solid rgba(255,255,255,.25);color:#fff;background:rgba(0,0,0,.22);}
+    .btn-ghost:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.08);}
+
+    /* Logo hero */
+    .logo-hero-wrap{
+      position:relative;
+      width:min(455px,76vw);aspect-ratio:1;margin:auto;
+    }
+    .logo-glow{
+      position:absolute;inset:-20px;border-radius:50%;
+      background:radial-gradient(circle,rgba(255,53,20,.85),rgba(255,160,30,.55) 38%,transparent 65%);
+      filter:blur(10px);
+      animation:pulse-glow 3.2s ease-in-out infinite;
+      z-index:0;
+    }
+    .logo-hero{
+      position:relative;z-index:1;
+      width:100%;height:100%;
+      object-fit:cover;border-radius:50%;
+      box-shadow:0 20px 80px rgba(0,0,0,.55);
+    }
+    @keyframes pulse-glow{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.7;transform:scale(1.04);}}
+
+    /* Features row */
+    .hero-features{
+      position:absolute;z-index:6;
+      left:50%;bottom:34px;
+      transform:translateX(-50%);
+      width:min(100%,1280px);padding:0 24px;
+      display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+    }
+    .hf{
+      border-left:1.5px solid rgba(255,255,255,.11);
+      padding-left:20px;
+      display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;
+    }
+    .hf-ico{font-size:34px;color:var(--red);line-height:1;filter:drop-shadow(0 0 8px rgba(255,53,20,.6));}
+    .hf h3{font-size:15px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;line-height:1.25;}
+    .hf p{color:#b8b8c0;margin-top:4px;font-size:14px;line-height:1.45;}
+
+    /* Red strip bottom */
+    .red-strip{
+      position:absolute;bottom:0;left:0;right:0;
+      height:24px;z-index:7;
+      background:var(--red);
+      box-shadow:0 -8px 32px rgba(255,53,20,.3);
+    }
+
+    /* ═══════════════════════════════
+       TICKER
+    ═══════════════════════════════ */
+    .ticker{
+      background:linear-gradient(90deg,var(--red),var(--orange),var(--yellow));
+      color:#111;overflow:hidden;position:relative;z-index:10;
+    }
+    .ticker-track{display:flex;white-space:nowrap;animation:scroll 22s linear infinite;}
+    .ticker span{font-family:'Bebas Neue';font-size:30px;letter-spacing:.08em;padding:11px 26px;}
+    @keyframes scroll{to{transform:translateX(-50%)}}
+
+    /* ═══════════════════════════════
+       SECTIONS
+    ═══════════════════════════════ */
+    .section{padding:88px 24px;background:var(--dark);}
+    .section.alt{background:var(--dark2);}
+    .wrap{max-width:1280px;margin:auto;}
+    .s-label{font-size:13px;font-weight:900;letter-spacing:.28em;text-transform:uppercase;color:var(--yellow);margin-bottom:10px;}
+    h2{font-family:'Bebas Neue';font-size:clamp(52px,6vw,88px);line-height:.9;letter-spacing:.03em;}
+    .lead{max-width:760px;color:var(--muted);font-size:18px;line-height:1.75;margin-top:16px;}
+
+    /* Cards */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
+    .card{
+      position:relative;overflow:hidden;
+      border-radius:26px;border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.022));
+      padding:28px;transition:.22s;
+    }
+    .card:hover{transform:translateY(-5px);border-color:rgba(255,212,47,.35);}
+    .card::before{content:"";position:absolute;right:-40px;top:-40px;width:120px;height:120px;border-radius:50%;background:rgba(255,53,20,.15);filter:blur(20px);}
+    .card .icon{font-size:34px;margin-bottom:16px;}
+    .card h3{font-family:'Bebas Neue';font-size:32px;letter-spacing:.04em;margin-bottom:8px;}
+    .card p{color:var(--muted);line-height:1.65;font-size:15px;}
+
+    /* Historia */
+    .history-box{
+      margin-top:32px;
+      border-left:4px solid var(--red);
+      background:rgba(255,255,255,.04);
+      border-radius:0 22px 22px 0;
+      padding:28px;color:#d5d5dc;line-height:1.72;font-size:17px;
+    }
+    .history-box strong{color:var(--yellow);}
+
+    /* Plans */
+    .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
+    .plan{
+      border:1px solid rgba(255,255,255,.09);background:#141418;
+      border-radius:28px;padding:30px;
+      display:flex;flex-direction:column;
+    }
+    .plan.popular{
+      background:linear-gradient(145deg,var(--red),#a92309);
+      box-shadow:0 0 50px rgba(255,53,20,.28);
+      border-color:rgba(255,53,20,.4);
+    }
+    .plan h3{font-family:'Bebas Neue';font-size:40px;letter-spacing:.04em;}
+    .plan-price{font-family:'Bebas Neue';font-size:68px;color:var(--yellow);margin:8px 0;line-height:1;}
+    .plan ul{list-style:none;display:grid;gap:11px;margin:20px 0;color:#ddd;line-height:1.4;flex:1;}
+    .plan li{display:flex;align-items:center;gap:8px;font-size:15px;}
+    .plan li::before{content:"✓";color:var(--yellow);font-weight:900;font-size:16px;flex-shrink:0;}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px;}
+    .gallery-item{
+      min-height:220px;border-radius:22px;padding:20px;
+      display:flex;align-items:end;overflow:hidden;
+      font-family:'Bebas Neue';font-size:30px;letter-spacing:.03em;
+      border:1px solid rgba(255,255,255,.07);
+      background:linear-gradient(135deg,rgba(255,53,20,.28),rgba(255,212,47,.10)),#17171c;
+      transition:.2s;
+    }
+    .gallery-item:hover{transform:translateY(-4px);border-color:rgba(255,212,47,.3);}
+    .gallery-item:nth-child(2),.gallery-item:nth-child(5){min-height:290px;}
+
+    /* Contact */
+    .contact{background:linear-gradient(90deg,var(--red),var(--orange),var(--yellow));color:#080808;}
+    .contact .s-label,.contact h2{color:#080808;}
+    .contact .lead{color:rgba(0,0,0,.65);}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:36px;}
+    .contact-card{
+      background:rgba(255,255,255,.75);backdrop-filter:blur(10px);
+      border-radius:28px;padding:28px;
+    }
+    .contact-card .ci{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid rgba(0,0,0,.08);font-size:17px;font-weight:700;color:#111;}
+    .contact-card .ci:last-child{border-bottom:none;}
+    .contact-card .ci a{color:#111;font-weight:800;}
+    .contact-card .ci a:hover{color:var(--red);}
+
+    /* Footer */
+    footer{padding:36px 24px 88px;background:#050506;border-top:1px solid rgba(255,255,255,.08);}
+    .footer-inner{max-width:1280px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:24px;color:#a0a0a8;}
+    .social{display:flex;gap:16px;flex-wrap:wrap;}
+    .social a{color:var(--yellow);font-weight:900;font-size:14px;transition:.2s;}
+    .social a:hover{color:var(--white);}
+
+    /* Float WhatsApp */
+    .float-wa{
+      position:fixed;right:20px;bottom:20px;z-index:2000;
+      background:#25D366;color:#06130a;
+      padding:15px 22px;border-radius:999px;
+      font-weight:900;font-size:14px;letter-spacing:.05em;
+      box-shadow:0 10px 32px rgba(0,0,0,.4);
+      display:inline-flex;align-items:center;gap:8px;
+      transition:.2s;
+    }
+    .float-wa:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(0,0,0,.5);}
+
+    /* ═══════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════ */
+    @media(max-width:980px){
+      .nav-links,.nav-cta{display:none;}
+      .menu-btn{display:block;}
+      .hero-inner{grid-template-columns:1fr;text-align:center;padding-bottom:320px;}
+      .hero-copy{margin-left:auto;margin-right:auto;}
+      .ctas{justify-content:center;}
+      .badge{display:inline-flex;}
+      .logo-hero-wrap{order:-1;width:min(300px,76vw);}
+      .hero-features{grid-template-columns:1fr 1fr;bottom:48px;}
+      .hf{padding-left:14px;}
+      .cards,.plans{grid-template-columns:1fr;}
+      .gallery{grid-template-columns:1fr 1fr;}
+      .contact-grid{grid-template-columns:1fr;}
+      .footer-inner{flex-direction:column;text-align:center;}
+      .hero-lines{display:none;}
+    }
+    @media(max-width:560px){
+      h1{font-size:68px;}
+      .btn{width:100%;}
+      .hero-inner{padding-bottom:540px;}
+      .hero-features{grid-template-columns:1fr;gap:14px;}
+      .gallery{grid-template-columns:1fr;}
+      .float-wa{left:14px;right:14px;justify-content:center;}
+      .brand-title{font-size:26px;}
+      .brand-logo{width:40px;height:40px;}
+    }
+  </style>
 </head>
 <body>
 
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#inicio" class="brand">
-      <img src="img/logo.png" alt="Olympia Gym">
-      <div>
-        <div class="brand-title">OLYMPIA</div>
-        <div class="brand-sub">GYM ARMILLA</div>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#inicio" class="brand">
+        <img class="brand-logo" src="img/logo.png" alt="Olympia Gym">
+        <div>
+          <div class="brand-title">OLYMPIA</div>
+          <div class="brand-sub">GYM ARMILLA</div>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#historia">Historia</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#tarifas">Tarifas</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
       </div>
-    </a>
-    <div class="nav-links">
-      <a href="#historia">Historia</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#tarifas">Tarifas</a>
-      <a href="#galeria">Galería</a>
-      <a href="#contacto">Contacto</a>
+
+      <a class="nav-cta" href="https://wa.me/34958553118?text=Hola%20Olympia%20Gym%2C%20quiero%20informaci%C3%B3n%20para%20apuntarme" target="_blank">⚡ Apuntarme</a>
+      <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
     </div>
-    <a class="nav-cta" href="https://wa.me/34958553118?text=Hola%20Olympia%20Gym%2C%20quiero%20informaci%C3%B3n%20para%20apuntarme" target="_blank">⚡ Apuntarme</a>
-    <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
-  </div>
-  <div class="mobile-menu">
-    <a href="#historia">Historia</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#tarifas">Tarifas</a>
-    <a href="#galeria">Galería</a>
-    <a href="#contacto">Contacto</a>
-    <a href="https://wa.me/34958553118?text=Hola%20Olympia%20Gym%2C%20quiero%20informaci%C3%B3n%20para%20apuntarme" target="_blank">Apuntarme por WhatsApp</a>
-  </div>
-</nav>
 
-<header class="hero" id="inicio">
-  <div class="sun"></div>
-  <div class="olympia-outline">OLYMPIA</div>
+    <div class="mobile-menu">
+      <a href="#historia" onclick="document.getElementById('nav').classList.remove('open')">Historia</a>
+      <a href="#servicios" onclick="document.getElementById('nav').classList.remove('open')">Servicios</a>
+      <a href="#tarifas" onclick="document.getElementById('nav').classList.remove('open')">Tarifas</a>
+      <a href="#galeria" onclick="document.getElementById('nav').classList.remove('open')">Galería</a>
+      <a href="#contacto" onclick="document.getElementById('nav').classList.remove('open')">Contacto</a>
+      <a href="https://wa.me/34958553118" target="_blank">💬 Apuntarme por WhatsApp</a>
+    </div>
+  </nav>
 
-  <div class="hero-inner">
-    <div class="hero-text">
-      <div class="badge">Gym clásico · desde 1995</div>
-      <h1>HIERRO,<br>DISCIPLINA<br><span class="grad">Y FAMILIA</span></h1>
-      <p class="hero-copy">Olympia Gym es un gimnasio de los de toda la vida: culturismo, fuerza, constancia y ambiente real. Una estética retro años 80 con una experiencia moderna para entrenar en serio.</p>
-      <div class="ctas">
-        <a class="btn btn-yellow" href="https://wa.me/34958553118?text=Hola%20Olympia%20Gym%2C%20quiero%20informaci%C3%B3n%20para%20apuntarme" target="_blank">💬 Apuntarme por WhatsApp</a>
-        <a class="btn btn-red" href="tel:958553118">📞 Llamar</a>
-        <a class="btn btn-ghost" href="#tarifas">Ver tarifas →</a>
+  <!-- HERO -->
+  <header class="hero" id="inicio">
+    <div class="hero-bg-img"></div>
+    <div class="hero-lines"></div>
+    <div class="hero-scanlines"></div>
+    <div class="olympia-ghost">OLYMPIA</div>
+
+    <div class="hero-inner">
+      <!-- LEFT -->
+      <div class="hero-text">
+        <div class="badge"><span class="badge-dot"></span>Gym clásico · Desde 1995</div>
+
+        <h1>HIERRO,<br>DISCIPLINA<br><span class="grad">Y FAMILIA</span></h1>
+
+        <p class="hero-copy">
+          Olympia Gym es un gimnasio de los de toda la vida: culturismo, fuerza, constancia y ambiente real. Una estética retro años 80 con una experiencia moderna para entrenar en serio.
+        </p>
+
+        <div class="ctas">
+          <a class="btn btn-yellow" href="https://wa.me/34958553118?text=Hola%20Olympia%20Gym%2C%20quiero%20informaci%C3%B3n%20para%20apuntarme" target="_blank">💬 Apuntarme por WhatsApp</a>
+          <a class="btn btn-red" href="tel:958553118">📞 Llamar</a>
+          <a class="btn btn-ghost" href="#tarifas">Ver tarifas →</a>
+        </div>
       </div>
-    </div>
 
-    <div class="logo-hero-wrap">
-      <img class="logo-hero" src="img/logo.png" alt="Logo Olympia Gym">
-    </div>
-  </div>
-
-  <div class="hero-features">
-    <div class="hero-feature"><div class="ico">🏋️</div><div><h3>Equipamiento profesional</h3><p>Máquinas y material de alta calidad</p></div></div>
-    <div class="hero-feature"><div class="ico">⭐</div><div><h3>Ambiente real</h3><p>Gym de los de toda la vida</p></div></div>
-    <div class="hero-feature"><div class="ico">💪</div><div><h3>Entrenamiento personalizado</h3><p>Planes adaptados a ti</p></div></div>
-    <div class="hero-feature"><div class="ico">👥</div><div><h3>Comunidad y familia</h3><p>Más que un gym, una familia</p></div></div>
-  </div>
-
-  <div class="red-grunge"></div>
-</header>
-
-<div class="ticker">
-  <div class="ticker-track">
-    <span>Culturismo</span><span>· Fitness</span><span>· Fuerza</span><span>· Disciplina</span><span>· Olympia</span><span>· Armilla</span>
-    <span>Culturismo</span><span>· Fitness</span><span>· Fuerza</span><span>· Disciplina</span><span>· Olympia</span><span>· Armilla</span>
-  </div>
-</div>
-
-<section class="section alt" id="historia">
-  <div class="wrap">
-    <div class="label">Nuestra historia</div>
-    <h2>Un gym de verdad</h2>
-    <p class="lead">Un gimnasio clásico con carácter propio: hierro, cercanía, constancia y cultura de entrenamiento real.</p>
-    <div class="history-box"><strong>Desde 1995</strong>, Olympia Gym representa la esencia del fitness de toda la vida: entrenar duro, mejorar cada día y formar parte de una comunidad que te empuja a seguir.</div>
-  </div>
-</section>
-
-<section class="section" id="servicios">
-  <div class="wrap">
-    <div class="label">Lo que ofrecemos</div>
-    <h2>Servicios</h2>
-    <p class="lead">Todo lo necesario para progresar en serio: musculación, fuerza, preparación, nutrición y acompañamiento.</p>
-    <div class="cards">
-      <div class="card"><div class="icon">🏋️</div><h3>Musculación</h3><p>Sala de pesas completa para fuerza, volumen y definición.</p></div>
-      <div class="card"><div class="icon">🚴</div><h3>Spinning</h3><p>Entrenamientos intensos con ritmo, energía y motivación.</p></div>
-      <div class="card"><div class="icon">🥗</div><h3>Nutrición</h3><p>Asesoramiento para acompañar tu progreso dentro y fuera del gym.</p></div>
-      <div class="card"><div class="icon">🔥</div><h3>Preparación</h3><p>Programas de entrenamiento orientados a objetivos reales.</p></div>
-      <div class="card"><div class="icon">👤</div><h3>Personal</h3><p>Acompañamiento más cercano para técnica, rutina y evolución.</p></div>
-      <div class="card"><div class="icon">🛒</div><h3>Tienda</h3><p>Suplementos, accesorios y productos deportivos.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section alt" id="tarifas">
-  <div class="wrap">
-    <div class="label">Membresías</div>
-    <h2>Tarifas</h2>
-    <p class="lead">Puedes dejar los precios visibles o hacer que contacten por WhatsApp para consultar promociones actuales.</p>
-    <div class="plans">
-      <div class="plan"><h3>Básico</h3><div class="price">€ --</div><ul><li>Sala de musculación</li><li>Vestuarios</li><li>Horario completo</li></ul><a class="btn btn-ghost" href="https://wa.me/34958553118?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20plan%20B%C3%A1sico" target="_blank">Consultar</a></div>
-      <div class="plan popular"><h3>Mensual</h3><div class="price">€ --</div><ul><li>Acceso completo</li><li>Asesoramiento inicial</li><li>Plan recomendado</li></ul><a class="btn btn-yellow" href="https://wa.me/34958553118?text=Hola%2C%20quiero%20apuntarme%20al%20gimnasio" target="_blank">Apuntarme</a></div>
-      <div class="plan"><h3>Premium</h3><div class="price">€ --</div><ul><li>Seguimiento</li><li>Rutina personalizada</li><li>Objetivos concretos</li></ul><a class="btn btn-ghost" href="https://wa.me/34958553118?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20plan%20Premium" target="_blank">Consultar</a></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="galeria">
-  <div class="wrap">
-    <div class="label">El ambiente</div>
-    <h2>Galería</h2>
-    <p class="lead">Aquí puedes poner fotos reales del gimnasio para que la página gane confianza y personalidad.</p>
-    <div class="gallery">
-      <div class="gallery-item">Pesas</div><div class="gallery-item">Máquinas</div><div class="gallery-item">Cardio</div><div class="gallery-item">Spinning</div>
-      <div class="gallery-item">Comunidad</div><div class="gallery-item">Resultados</div><div class="gallery-item">Tienda</div><div class="gallery-item">Olympia</div>
-    </div>
-  </div>
-</section>
-
-<section class="section contact" id="contacto">
-  <div class="wrap">
-    <div class="label">Contacto</div>
-    <h2>Ven a entrenar</h2>
-    <p class="lead">El primer paso es entrar. Escríbenos, llama o ven al gimnasio.</p>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <p>📞 <a href="tel:958553118">958 55 31 18</a></p>
-        <p>💬 <a href="https://wa.me/34958553118?text=Hola%20Olympia%20Gym%2C%20quiero%20informaci%C3%B3n%20para%20apuntarme" target="_blank">WhatsApp directo</a></p>
-        <p>📍 Avda. Poniente, 42 · 18100 Armilla, Granada</p>
-      </div>
-      <div class="contact-card">
-        <p>📸 <a href="https://www.instagram.com/gymolympiaarmilla/" target="_blank">Instagram @gymolympiaarmilla</a></p>
-        <p>📘 <a href="https://www.facebook.com/p/Gimnasio-Olympia-100042657710916/" target="_blank">Facebook Gimnasio Olympia</a></p>
-        <p>🕒 L-V 7:00–22:30 · Sáb 10:00–13:30</p>
+      <!-- RIGHT: logo -->
+      <div class="logo-hero-wrap">
+        <div class="logo-glow"></div>
+        <img class="logo-hero" src="img/logo.png" alt="Logo Olympia Gym">
       </div>
     </div>
-  </div>
-</section>
 
-<footer>
-  <div class="footer-inner">
-    <a href="#inicio" class="brand">
-      <img src="img/logo.png" alt="Olympia Gym">
-      <div>
-        <div class="brand-title">OLYMPIA</div>
-        <div class="brand-sub">GYM ARMILLA</div>
-      </div>
-    </a>
-    <div class="social">
-      <a href="https://www.instagram.com/gymolympiaarmilla/" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/p/Gimnasio-Olympia-100042657710916/" target="_blank">Facebook</a>
+    <!-- Features -->
+    <div class="hero-features">
+      <div class="hf"><div class="hf-ico">🏋️</div><div><h3>Equipamiento profesional</h3><p>Máquinas y material de alta calidad</p></div></div>
+      <div class="hf"><div class="hf-ico">⭐</div><div><h3>Ambiente real</h3><p>Gym de los de toda la vida</p></div></div>
+      <div class="hf"><div class="hf-ico">💪</div><div><h3>Entrenamiento personalizado</h3><p>Planes adaptados a ti</p></div></div>
+      <div class="hf"><div class="hf-ico">👥</div><div><h3>Comunidad y familia</h3><p>Más que un gym, una familia</p></div></div>
     </div>
-    <p>© 2025 Olympia Gym Armilla</p>
+
+    <div class="red-strip"></div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>Culturismo</span><span>·</span><span>Fitness</span><span>·</span><span>Fuerza</span><span>·</span><span>Disciplina</span><span>·</span><span>Olympia</span><span>·</span><span>Armilla</span><span>·</span><span>Musculación</span><span>·</span><span>Spinning</span><span>·</span>
+      <span>Culturismo</span><span>·</span><span>Fitness</span><span>·</span><span>Fuerza</span><span>·</span><span>Disciplina</span><span>·</span><span>Olympia</span><span>·</span><span>Armilla</span><span>·</span><span>Musculación</span><span>·</span><span>Spinning</span><span>·</span>
+    </div>
   </div>
-</footer>
 
-<a class="float-wa" href="https://wa.me/34958553118?text=Hola%20Olympia%20Gym%2C%20quiero%20informaci%C3%B3n%20para%20apuntarme" target="_blank">💬 WhatsApp</a>
+  <!-- HISTORIA -->
+  <section class="section alt" id="historia">
+    <div class="wrap">
+      <div class="s-label">Nuestra historia</div>
+      <h2>Un gym de verdad</h2>
+      <p class="lead">Un gimnasio clásico con carácter propio: hierro, cercanía, constancia y cultura de entrenamiento real.</p>
+      <div class="history-box">
+        <strong>Desde 1995</strong>, Olympia Gym representa la esencia del fitness de toda la vida: entrenar duro, mejorar cada día y formar parte de una comunidad que te empuja a seguir. Más de 30 años formando campeones en Armilla, Granada.
+      </div>
+    </div>
+  </section>
 
-<script>
-document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => {
-  document.getElementById('nav').classList.remove('open');
-}));
-</script>
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios">
+    <div class="wrap">
+      <div class="s-label">Lo que ofrecemos</div>
+      <h2>Servicios</h2>
+      <p class="lead">Todo lo necesario para progresar en serio: musculación, fuerza, preparación, nutrición y acompañamiento.</p>
+      <div class="cards">
+        <div class="card"><div class="icon">🏋️</div><h3>Musculación</h3><p>Sala de pesas completa para fuerza, volumen y definición muscular.</p></div>
+        <div class="card"><div class="icon">🚴</div><h3>Spinning</h3><p>Entrenamientos intensos de ciclismo indoor con ritmo, energía y motivación garantizados.</p></div>
+        <div class="card"><div class="icon">🥗</div><h3>Nutrición</h3><p>Asesoramiento nutricional personalizado para acompañar tu progreso dentro y fuera del gym.</p></div>
+        <div class="card"><div class="icon">🔥</div><h3>Preparación Deportiva</h3><p>Programas de entrenamiento orientados a competidores y a objetivos reales.</p></div>
+        <div class="card"><div class="icon">👤</div><h3>Entrenamiento Personal</h3><p>Seguimiento 1 a 1 con los mejores profesionales para técnica, rutina y evolución.</p></div>
+        <div class="card"><div class="icon">🛒</div><h3>Tienda Deportiva</h3><p>Suplementos, proteínas, accesorios y ropa técnica de las mejores marcas.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARIFAS -->
+  <section class="section alt" id="tarifas">
+    <div class="wrap">
+      <div class="s-label">Membresías</div>
+      <h2>Tarifas</h2>
+      <p class="lead">Llámanos o escríbenos por WhatsApp para conocer los precios actuales y nuestras promociones.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3>Básico</h3>
+          <div class="plan-price">€ --</div>
+          <ul>
+            <li>Sala de musculación completa</li>
+            <li>Vestuarios y taquillas</li>
+            <li>Horario completo</li>
+          </ul>
+          <a class="btn btn-ghost" href="https://wa.me/34958553118?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20plan%20B%C3%A1sico" target="_blank" style="margin-top:auto;">Consultar</a>
+        </div>
+        <div class="plan popular">
+          <h3>Mensual</h3>
+          <div class="plan-price">€ --</div>
+          <ul>
+            <li>Acceso completo al gym</li>
+            <li>Clases de spinning</li>
+            <li>Asesoramiento inicial</li>
+            <li>Plan más recomendado</li>
+          </ul>
+          <a class="btn btn-yellow" href="https://wa.me/34958553118?text=Hola%2C%20quiero%20apuntarme%20al%20gimnasio" target="_blank" style="margin-top:auto;">Apuntarme</a>
+        </div>
+        <div class="plan">
+          <h3>Premium</h3>
+          <div class="plan-price">€ --</div>
+          <ul>
+            <li>Acceso completo al gym</li>
+            <li>Entrenamiento personal 1:1</li>
+            <li>Rutina personalizada</li>
+            <li>Seguimiento continuo</li>
+          </ul>
+          <a class="btn btn-ghost" href="https://wa.me/34958553118?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20plan%20Premium" target="_blank" style="margin-top:auto;">Consultar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="section" id="galeria">
+    <div class="wrap">
+      <div class="s-label">El ambiente</div>
+      <h2>Galería</h2>
+      <p class="lead">Añade aquí fotos reales del gimnasio para que la página transmita personalidad y confianza.</p>
+      <div class="gallery">
+        <div class="gallery-item">Pesas</div>
+        <div class="gallery-item">Máquinas</div>
+        <div class="gallery-item">Cardio</div>
+        <div class="gallery-item">Spinning</div>
+        <div class="gallery-item">Comunidad</div>
+        <div class="gallery-item">Resultados</div>
+        <div class="gallery-item">Tienda</div>
+        <div class="gallery-item">Olympia</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section contact" id="contacto">
+    <div class="wrap">
+      <div class="s-label">Contacto</div>
+      <h2>Ven a entrenar</h2>
+      <p class="lead">El primer paso es entrar. Escríbenos, llama o ven al gimnasio.</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="ci">📞 <a href="tel:958553118">958 55 31 18</a></div>
+          <div class="ci">💬 <a href="https://wa.me/34958553118" target="_blank">WhatsApp directo</a></div>
+          <div class="ci">📍 Avda. Poniente, 42 · 18100 Armilla, Granada</div>
+          <div class="ci">🕒 L-V 7:00–22:30 · Sáb 10:00–13:30</div>
+        </div>
+        <div class="contact-card">
+          <div class="ci">📸 <a href="https://www.instagram.com/gymolympiaarmilla/" target="_blank">@gymolympiaarmilla</a></div>
+          <div class="ci">📘 <a href="https://www.facebook.com/p/Gimnasio-Olympia-100042657710916/" target="_blank">Facebook Gimnasio Olympia</a></div>
+          <div class="ci">⭐ 5 estrellas en Google · Desde 1995</div>
+          <div class="ci">🅿️ Parking gratuito · A 5 min de Granada</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="#inicio" class="brand">
+        <img class="brand-logo" src="img/logo.png" alt="Olympia Gym">
+        <div>
+          <div class="brand-title">OLYMPIA</div>
+          <div class="brand-sub">GYM ARMILLA</div>
+        </div>
+      </a>
+      <div class="social">
+        <a href="https://www.instagram.com/gymolympiaarmilla/" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/p/Gimnasio-Olympia-100042657710916/" target="_blank">Facebook</a>
+        <a href="https://wa.me/34958553118" target="_blank">WhatsApp</a>
+      </div>
+      <p>© 2025 Olympia Gym Armilla · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- FLOAT WHATSAPP -->
+  <a class="float-wa" href="https://wa.me/34958553118?text=Hola%20Olympia%20Gym%2C%20quiero%20informaci%C3%B3n%20para%20apuntarme" target="_blank">
+    💬 WhatsApp
+  </a>
+
 </body>
 </html>
