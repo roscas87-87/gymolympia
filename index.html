@@ -96,8 +96,8 @@
     .hero-bg-img{
       position:absolute;
       inset:72px 0 0;
-      background:url("img/brazos_sun.png") center 30% / min(2000px,145vw) auto no-repeat;
-      opacity:.75;
+      background:url("img/brazos_sun.png") center 28% / min(3200px,220vw) auto no-repeat;
+      opacity:.98;
       filter:contrast(110%) brightness(95%);
       z-index:1;
       pointer-events:none;
@@ -134,17 +134,18 @@
 
     /* OLYMPIA texto fantasma */
     .olympia-ghost{
-      position:absolute;z-index:2;
-      left:4vw;bottom:80px;
+      position:absolute;z-index:5;
+      left:3vw;bottom:70px;
       font-family:'Bebas Neue';
-      font-size:24vw;line-height:.75;
+      font-size:26vw;line-height:.75;
       color:transparent;
-      -webkit-text-stroke:1.5px rgba(255,53,20,.20);
+      -webkit-text-stroke:2px rgba(255,53,20,.55);
+      text-shadow:0 0 80px rgba(255,53,20,.15);
       pointer-events:none;user-select:none;
     }
 
     .hero-inner{
-      position:relative;z-index:5;
+      position:relative;z-index:7;
       max-width:1280px;margin:auto;
       min-height:calc(100vh - 72px);
       display:grid;grid-template-columns:1.05fr .95fr;
@@ -608,4 +609,3 @@
 
 </body>
 </html>
- 
